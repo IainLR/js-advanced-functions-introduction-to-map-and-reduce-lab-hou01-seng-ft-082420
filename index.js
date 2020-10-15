@@ -51,11 +51,7 @@ const reduceToTotal = (arr, start = 0) =>{
 const reduceToAllTrue = (arr) => {
     let result = true
     for( const item of arr){
-        if(item){
-            result = true
-        }else{
-            return result = false
-        }
+        if(!item){return result = false}
     }
     return result
 }
@@ -67,9 +63,7 @@ console.log(reduceToAllTrue(trueTestI))
 const reduceToAnyTrue = (arr) => {
     let result = false
     for( const item of arr){
-        if(item){
-            return result = true
-        }
+        if(item){return result = true}
     }
     return result
 }
